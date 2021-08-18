@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:orientation="vertical"
+        android:id="@+id/container">
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/btn_rotate"
+                style="@style/CustomButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/rotate" />
+
+            <Button
+                android:id="@+id/btn_translate"
+                style="@style/CustomButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/translate" />
+
+            <Button
+                android:id="@+id/btn_scale"
+                style="@style/CustomButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/scale" />
+
+            <Button
+                android:id="@+id/btn_fade"
+                style="@style/CustomButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/fade" />
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/btn_sky_color"
+                style="@style/CustomButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:text="@string/sky_color" />
+
+            <Button
+                android:id="@+id/btn_shower"
+                style="@style/CustomButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:text="@string/shower" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/container2">
+
+        <ImageView
+            android:id="@+id/img_cat"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_marginStart="164dp"
+            android:layout_marginBottom="388dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:srcCompat="@drawable/ic_cat" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</LinearLayout>
