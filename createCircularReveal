@@ -1,0 +1,15 @@
+ binding.txtTest.setOnClickListener { view ->
+            val isClick = (view.background == null)
+
+            val finalRadius = hypot((view.width/2).toDouble(), (view.height/2).toDouble())
+
+            if(isClick){
+                val anim = ViewAnimationUtils.createCircularReveal(view, view.width/2 , view.height/2, 0f ,
+                    finalRadius.toFloat()
+                )
+//                view.setBackgroundColor(Color.GREEN)
+                anim.start()
+            }else{
+                view.setBackgroundColor(Color.WHITE)
+            }
+        }
